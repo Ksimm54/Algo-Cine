@@ -238,7 +238,7 @@ def etape140():
                                 if len(df_yt_id[df_yt_id['Chaine'] == chaine]) > 0:
                                     
                                     # Utilisation de l'API YouTube  
-                                    API_KEY = "AIzaSyAdoD0cKGGA75omqHrahS1t6Rh4765QR8g"
+                                    API_KEY = ""
                                     CHANNEL_ID = df_yt_id.loc[df_yt_id['Chaine'] == chaine, 'ID'].iloc[0]  # FilmsActus
                                     
                                     page_token = None
