@@ -1,5 +1,12 @@
 # -*- coding: utf-8 -*-
 """
+Created on Fri Apr  4 10:07:37 2025
+
+@author: User
+"""
+
+# -*- coding: utf-8 -*-
+"""
 Projet Ciné Portfolio
 Créateur: Arthur BODY
 Date : 18/01/2025

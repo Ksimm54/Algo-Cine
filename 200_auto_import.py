@@ -48,9 +48,12 @@ with open(prog_folder+r"\250_valeurs_manquantes.py", encoding="utf-8") as file:
     exec(file.read())  
 
 with open(prog_folder+r"\260_ajout_donnees_freq.py", encoding="utf-8") as file:
-    exec(file.read())  
-
+    exec(file.read()) 
+    
 with open(prog_folder+r"\270_Export.py", encoding="utf-8") as file:
+    exec(file.read())  
+    
+with open(prog_folder+r"\280_complement_entrees.py", encoding="utf-8") as file:
     exec(file.read())  
 
 
@@ -85,7 +88,11 @@ logger.info('Programme 260_ajout_donnees_freq.py exécuté')
 
 # Lancement de l'étape 270: Export
 etape270()
-logger.info('Programme 270_Export.py exécuté') 
+logger.info('Programme 270_export.py exécuté') 
+
+# Lancement de l'étape 280: Complement entrées
+etape280()
+logger.info('Programme 280_complement_entrees.py exécuté') 
     
 
 

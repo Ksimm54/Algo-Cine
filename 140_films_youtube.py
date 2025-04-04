@@ -36,6 +36,7 @@ def etape140():
     df_dates = pd.read_excel(_0_file_param_variables, sheet_name=_0_sheet_date_import_y)
     df_yt_id = pd.read_excel(_0_file_labels, sheet_name=_0_sheet_chaines_y)
     token_df = pd.read_excel(_0_file_param_variables, sheet_name = _0_sheet_token)
+    api_key_df = pd.read_excel(_0_file_param_variables, sheet_name = _0_sheet_api_key)
     
     # On définit en datetime les variables
     df_y["StartDate"] = pd.to_datetime(df_y["StartDate"])
@@ -238,7 +239,7 @@ def etape140():
                                 if len(df_yt_id[df_yt_id['Chaine'] == chaine]) > 0:
                                     
                                     # Utilisation de l'API YouTube  
-                                    API_KEY = ""
+                                    API_KEY = api_key_df['API_KEY'].iloc[0]
                                     CHANNEL_ID = df_yt_id.loc[df_yt_id['Chaine'] == chaine, 'ID'].iloc[0]  # FilmsActus
                                     
                                     page_token = None

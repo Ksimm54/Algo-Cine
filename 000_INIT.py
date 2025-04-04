@@ -111,6 +111,7 @@ _0_sheet_date_import_cd = "100_Date_Import_Cine_Directors"
 _0_sheet_date_import_y = "100_Date_Import_Youtube"
 _0_sheet_token = "100_Token"
 _0_sheet_date_to_pred = "200_Date_to_pred"
+_0_sheet_api_key = "100_API_KEY"
 
 _0_file_films_youtube = data_folder + "/films_youtube.xlsx"
 
