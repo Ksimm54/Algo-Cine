@@ -33,6 +33,7 @@ def etape250():
     
     # TEMPORAIRE : AJOUTER UNE ETAPE QUI REMPLACE LES VALEURS MANQUANTES DE BUDGET-----
     df['Budget'] = df['Budget'].fillna(4000000)
+    df['Budget'] = df['Budget'].replace(-1, 4000000).fillna(4000000)
     # TEMPORAIRE ----------------------------------------------------------------------
     
     # TEMPORAIRE : AJOUTER UNE ETAPE QUI REMPLACE LES VALEURS MANQUANTES DE BUDGET-----
