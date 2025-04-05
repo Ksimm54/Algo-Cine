@@ -34,13 +34,16 @@ def etape150():
     token_df = pd.read_excel(_0_file_param_variables, sheet_name = _0_sheet_token)
     df_y = pd.read_excel(_0_file_films_youtube)
     df = pd.read_excel(os.path.join(output_folder_100, 'Films_140.xlsx'))
+    # On supprime les valeurs vides pour Vidéo ID lorsqu'il n'y a pas de données pour une semaine
+    df = df.dropna(subset=['Vidéo ID'])
+    
     old_len = len(df)
     
     #On vérifie que le nombre de token n'a pas été atteint:  
     df = df.dropna(subset=['Titre'])
     new_len = len(df)
     
-    if old_len > new_len: 
+    if old_len > new_len and old_len > 0: 
         
         print("Limite de Token atteinte")
         token_df['Nb Token'] = 0
